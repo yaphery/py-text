@@ -7,6 +7,7 @@ from dashscope.api_entities.dashscope_response import Role
 api_key = os.environ.get('DASHSCOPE_API_KEY')
 dashscope.api_key = api_key
 
+
 # 编写你的天气函数
 # 为了演示流程，这里指定了天气的温度，实际上可以调用 高德接口获取实时天气。
 # 这里可以先用每个城市的固定天气进行返回，查看大模型的调用情况
