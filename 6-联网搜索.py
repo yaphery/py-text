@@ -34,6 +34,7 @@ completion = client.chat.completions.create(
 print(completion.choices[0].message.content)  # 看最终文本
 # print(type(completion))         # 看类型，OpenAIResponse对象
 
+print(completion.model_dump_json())
 
 """
  <class 'openai.types.chat.chat_completion.ChatCompletion'>
@@ -49,5 +50,6 @@ print(completion.choices[0].message.content)  # 看最终文本
  }
  这个是开启模型的联网搜索能力，但是只有用client.chat.completions.create()这个接口才行，如果用client.responses.create()这个新接口，就算加了extra_body={"enable_search": True}，也不起作用，模型依然无法联网搜索。
 """
+
 
 

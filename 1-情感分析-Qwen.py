@@ -25,7 +25,8 @@ def get_response(messages):
     )
     return response
     
-review = '这款音效一般般，并且性价比不是很高。'
+# review = '这款音效特别好 给你意想不到的音质。'
+review =input('这款音响怎么样：')
 messages=[
     {"role": "system", "content": "你是一名舆情分析师，帮我判断产品口碑的正负向，回复请用一个词语：正向 或者 负向"},
     {"role": "user", "content": review}
@@ -33,4 +34,6 @@ messages=[
 
 response = get_response(messages)
 print(response.output.choices[0].message.content)
+
+print(response)
 
